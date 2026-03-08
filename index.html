@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panda Commerce</title>
+    <link rel="icon" type="image/png" href="assets/logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+</head>
+<body>
+
+    <header class="container">
+        <nav class="navbar">
+            <a href="#"><img src="assets/logo.png" alt="Panda Logo" class="logo"></a>
+            
+            <div class="menu-toggle" id="mobile-menu">
+                <img src="assets/menu-bar.png" alt="Toggle Menu" class="menu-icon">
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#shoes">Shoes</a></li>
+                <li><a href="#backpack">Backpack</a></li>
+                <li><a href="#subscribe">Subscribe</a></li>
+            </ul>
+        </nav>
+
+        <section class="hero-section">
+            <div class="hero-text">
+                <h1>Mi LED TV 4A PRO 32</h1>
+                <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
+                <h2 class="price">$1289</h2>
+                <button class="buy-now">BUY NOW</button>
+            </div>
+            <div class="hero-img">
+                <img src="assets/hero-tv.png" alt="Mi TV Banner">
+            </div>
+        </section>
+    </header>
+
+    <main class="container">
+        <section class="categories">
+            <div class="cat-grid">
+                <div class="cat-card orange">
+                    <span>Watch</span>
+                    <img src="assets/category-watch.png" alt="Watch Category">
+                </div>
+                <div class="cat-card pink">
+                    <span>Bag</span>
+                    <img src="assets/category-bag.png" alt="Bag Category">
+                </div>
+                <div class="cat-card blue">
+                    <span>Shoes</span>
+                    <img src="assets/category-shoe.png" alt="Shoes Category">
+                </div>
+            </div>
+        </section>
+
+        <section id="shoes" class="product-section">
+            <h2 class="section-title">Shoes</h2>
+            <div class="product-grid">
+                <div class="product-card bordered">
+                    <img src="assets/shoe-1.png" alt="Reebok Dart">
+                    <h3>Reebok Dart Men's Shoes</h3>
+                    <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.</p>
+                    <h4>$1289</h4>
+                    <button class="buy-now-black">BUY NOW &rarr;</button>
+                </div>
+                <div class="product-card bordered">
+                    <img src="assets/shoe-2.png" alt="Reebok Pump">
+                    <h3>Reebok Pump</h3>
+                    <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.</p>
+                    <h4>$799</h4>
+                    <button class="buy-now-black">BUY NOW &rarr;</button>
+                </div>
+                <div class="product-card bordered">
+                    <img src="assets/shoe-3.png" alt="Reebok All Terrain">
+                    <h3>Reebok All Terrain</h3>
+                    <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.</p>
+                    <h4>$699</h4>
+                    <button class="buy-now-black">BUY NOW &rarr;</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="backpack" class="product-section">
+            <h2 class="section-title">Backpack</h2>
+            <div class="product-grid">
+                <div class="product-card bordered">
+                    <img src="assets/bag-1.png" alt="Ison Backpack">
+                    <h3>Ison Backpack</h3>
+                    <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.</p>
+                    <h4>$1289</h4>
+                    <button class="buy-now-black">BUY NOW &rarr;</button>
+                </div>
+                <div class="product-card bordered">
+                    <img src="assets/bag-2.png" alt="Biaowang Backpack">
+                    <h3>Biaowang Backpack</h3>
+                    <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.</p>
+                    <h4>$799</h4>
+                    <button class="buy-now-black">BUY NOW &rarr;</button>
+                </div>
+                <div class="product-card bordered">
+                    <img src="assets/bag-3.png" alt="Dxyizu WS54 Smart">
+                    <h3>Dxyizu WS54 Smart</h3>
+                    <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.</p>
+                    <h4>$699</h4>
+                    <button class="buy-now-black">BUY NOW &rarr;</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <section id="subscribe" class="subscribe-section container">
+        <div class="subscribe-content">
+            <h3>LET'S STAY IN TOUCH</h3>
+            <p>Get updates on sales specials and more</p>
+            <form class="subscribe-form">
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit" class="send-btn">Send</button>
+            </form>
+        </div>
+    </section>
+
+    <script>
+        const menu = document.querySelector('#mobile-menu');
+        const navLinks = document.querySelector('.nav-links');
+
+        menu.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

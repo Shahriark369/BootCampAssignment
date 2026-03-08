@@ -1,0 +1,211 @@
+:root {
+    --panda-pink: #ff4081;
+    --bg-light-pink: #fff1f1;
+    --text-dark: #212121;
+    --text-gray: #707070;
+    --border-light: #e2e2e2;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-dark);
+    line-height: 1.6;
+    overflow-x: hidden; 
+}
+
+.container {
+    width: 92%; 
+    max-width: 1140px; 
+    margin: 0 auto;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.logo { width: 140px; height: auto; }
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    margin-left: 30px;
+    color: var(--text-dark);
+    font-weight: 500;
+}
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+.menu-icon { width: 28px; }
+
+.hero-section {
+    background-color: var(--bg-light-pink);
+    border-radius: 15px;
+    display: flex;
+    flex-wrap: wrap; 
+    align-items: center;
+    padding: 40px;
+    margin-bottom: 60px;
+}
+
+.hero-text { 
+    flex: 1; 
+    min-width: 300px; 
+}
+
+.hero-text h1 { font-size: clamp(1.8rem, 5vw, 3.5rem); line-height: 1.2; }
+.hero-text p { color: var(--text-gray); margin: 15px 0; }
+
+.price { color: var(--panda-pink); font-size: 2rem; margin: 15px 0; }
+
+.buy-now {
+    background: linear-gradient(180deg, #ff5e9e 0%, #ff4081 100%);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.hero-img { 
+    flex: 1; 
+    min-width: 280px;
+    text-align: center; 
+}
+.hero-img img { 
+    max-width: 100%; 
+    height: auto; 
+}
+
+
+.cat-grid, .product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-bottom: 60px;
+}
+
+.cat-card {
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.cat-card img { width: 70px; }
+.orange { background-color: #ffa447; }
+.pink { background-color: #ff4081; }
+.blue { background-color: #4321ff; }
+
+.product-card.bordered {
+    background: #fff;
+    text-align: center;
+    padding: 30px 15px;
+    border: 1px solid var(--border-light);
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
+}
+
+.product-card img { 
+    width: 100%; 
+    height: 180px; 
+    object-fit: contain; 
+    margin-bottom: 20px; 
+}
+
+.buy-now-black {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 25px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+}
+
+.subscribe-section {
+    background-color: var(--bg-light-pink);
+    min-height: 300px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 80px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.subscribe-form {
+    background: white;
+    padding: 5px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 450px;
+    display: flex;
+    margin-top: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.subscribe-form input { 
+    border: none; 
+    padding: 12px; 
+    flex-grow: 1; 
+    outline: none; 
+    width: 10%; 
+}
+
+.send-btn {
+    background: var(--panda-pink);
+    color: white;
+    border: none;
+    padding: 0 25px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle { display: block; }
+    
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: #fff;
+        flex-direction: column;
+        padding: 20px;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        z-index: 100;
+    }
+
+    .nav-links.active { display: flex; }
+    .nav-links li a { margin: 10px 0; display: block; }
+
+    .hero-section { text-align: center; padding: 30px 20px; }
+    .hero-img { order: -1; margin-bottom: 20px; } 
+    
+    .subscribe-form { flex-direction: column; background: transparent; box-shadow: none; }
+    .subscribe-form input { background: #fff; margin-bottom: 10px; border-radius: 8px; width: 100%; }
+    .send-btn { padding: 12px; border-radius: 8px; }
+}
